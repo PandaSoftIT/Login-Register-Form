@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PandaSoft IT - Login & Register</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="notification" class="notification"></div>
+    <div class="container">
+      <div class="form-container">
+        <form id="login-form" class="form" onsubmit="handleLogin(event)">
+          <h2>Login</h2>
+          <input type="email" placeholder="Email" required />
+          <input
+            type="password"
+            placeholder="Password"
+            id="login-password"
+            required
+          />
+          <button type="submit">Login</button>
+          <p>
+            Don't have an account?
+            <a href="#" onclick="showRegister()">Register here</a>
+          </p>
+        </form>
+        <form
+          id="register-form"
+          class="form hidden"
+          onsubmit="handleRegister(event)"
+        >
+          <h2>Register</h2>
+          <input type="text" placeholder="Name" required />
+          <input type="email" placeholder="Email" required />
+          <input
+            type="password"
+            placeholder="Password"
+            id="register-password"
+            required
+          />
+          <input
+            type="password"
+            placeholder="Confirm Password"
+            id="register-confirm-password"
+            required
+          />
+          <button type="submit">Register</button>
+          <p>
+            Already have an account?
+            <a href="#" onclick="showLogin()">Login here</a>
+          </p>
+        </form>
+      </div>
+    </div>
+    <script src="scripts.js"></script>
+  </body>
+</html>
